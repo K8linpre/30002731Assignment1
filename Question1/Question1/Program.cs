@@ -8,42 +8,42 @@ namespace Question1
 {
     class Car
     {
-        private string colour;
-        private string make;
-        private string gearbox;
+        private string col;
+        private string mk;
+        private string gbox;
 
 
         public string Colour
         {
             get
             {
-                return colour;
+                return col;
             }
             set
             {
-                colour = value;
+                col = value;
             }
         }
         public string Make
         {
             get
             {
-                return make;
+                return mk;
             }
             set
             {
-                make = value;
+                mk = value;
             }
         }
         public string Gearbox
         {
             get
             {
-                return gearbox;
+                return gbox;
             }
             set
             {
-                gearbox = value;
+                gbox = value;
             }
         }
     }
