@@ -55,11 +55,11 @@ namespace Question1
             Car one = new Car();
             
             Console.WriteLine("Enter new car details below");
-            Console.WriteLine($"Colour: ");
+            Console.WriteLine("Colour: ");
             one.Colour = (Console.ReadLine());
-            Console.WriteLine($"Make: ");
+            Console.WriteLine("Make: ");
             one.Make = (Console.ReadLine());
-            Console.WriteLine($"Gearbox type: ");
+            Console.WriteLine("Gearbox type: ");
             one.Gearbox = (Console.ReadLine());
             Console.WriteLine("");
 
