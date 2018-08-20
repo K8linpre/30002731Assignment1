@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Question5
 {
-    class Person
+    public class Person
     {
-        Student;
         public string firstName;
         public string lastName;
         public int YearOfBirth;
-
 
         public string FirstName
         {
@@ -45,11 +43,28 @@ namespace Question5
             return DateTime.Now.Year - YearOfBirth;
         }
     }
-    public class Student
+    public class Student : Person
     {
-        public static void StudentID()
-        {
+        public string campus;
 
+        public string Campus
+        {
+            get
+            {
+                return campus;
+            }
+            set
+            {
+                campus = value;
+            }
+        }
+        public int StudentID(int min, int max)
+        {    
+            Random rnd = new Random();           
+            lock (rnd) // synchronize
+            {
+                return rnd.Next(min, max);
+            }
         }          
     }
 }

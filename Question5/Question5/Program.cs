@@ -11,21 +11,22 @@ namespace Question5
     {
         static void Main(string[] args)
         {
-            Person one = new Person();
+            Student stud1 = new Student();
 
-            Console.WriteLine("Enter the name of the new person below");
-            Console.WriteLine("First name: ");
-            one.FirstName = (Console.ReadLine());
-            Console.WriteLine("Last name: ");
-            one.LastName = (Console.ReadLine());
+            Console.WriteLine("Enter the name of the new student below");
+            Console.WriteLine("Enter first name: ");
+            stud1.FirstName = (Console.ReadLine());
+            Console.WriteLine("Enter last name: ");
+            stud1.LastName = (Console.ReadLine());
+            Console.WriteLine("Enter campus: ");
+            stud1.Campus = (Console.ReadLine());
             Console.WriteLine("");
             Console.WriteLine("Creating new person record ...");
-            Console.WriteLine("Enter year of birth: ");
-            one.YearOfBirth = int.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            Console.WriteLine($"Adding new student record to {stud1.Campus} ...");
             Console.WriteLine("");
 
-            Console.WriteLine($"Person: {one.GetFullName()} is {one.GetAge()} years old.");
-            int StudentID = one.EnrollStudent();
+            Console.WriteLine($"{stud1.GetFullName()} of {stud1.Campus} Campus has a student ID of {stud1.StudentID(1000,9999)}");
             Console.WriteLine();
         }
     }
