@@ -10,7 +10,7 @@ namespace Question_4
     {
         public string firstName;
         public string lastName;
-        public int YearOfBirth;
+        public int yearofbirth;
 
         public string FirstName
         {
@@ -34,13 +34,23 @@ namespace Question_4
                 lastName = value;
             }
         }
+        public int YearofBirth
+        {
+            get => yearofbirth;
+            set => yearofbirth = value;
+        }
         public string GetFullName()
         {
             return firstName + " " + lastName;
         }
-        public int GetAge()
+        public void SetYearofBirth(int value)
         {
-            return DateTime.Now.Year - YearOfBirth;
+            yearofbirth = value;
         }
+        public int GetYearofBirth()
+        {
+            return yearofbirth;
+        }
+
     }
 }
