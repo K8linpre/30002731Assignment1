@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace Question_4
 {
     class Person
-    {
+    {   //all are public so the users can access everything
         public string firstName;
         public string lastName;
-        public int yearofbirth;
-
+        public int YearofBirth;
+        //get and set methods for FirstName and LastName
         public string FirstName
         {
             get
@@ -34,22 +34,16 @@ namespace Question_4
                 lastName = value;
             }
         }
-        public int YearofBirth
-        {
-            get => yearofbirth;
-            set => yearofbirth = value;
-        }
+        
+        //combines the first name and lastname together so you can just call the GetFullName and it will print both.
         public string GetFullName()
         {
             return firstName + " " + lastName;
         }
-        public void SetYearofBirth(int value)
+        //works out the age of the person by minusing the user input off the current date
+        public int GetAge()
         {
-            yearofbirth = value;
-        }
-        public int GetYearofBirth()
-        {
-            return yearofbirth;
+            return DateTime.Now.Year - YearofBirth;
         }
 
     }

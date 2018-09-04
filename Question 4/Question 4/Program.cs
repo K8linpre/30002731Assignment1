@@ -14,7 +14,6 @@ namespace Question_4
         {
             //Constructor
             Person one = new Person();
-            int Age = 0;
             bool addPerson = false;
             bool New = false;
 
@@ -38,13 +37,13 @@ namespace Question_4
                 Console.WriteLine("");
                 Console.WriteLine("Creating new person record ...");
                 Console.WriteLine("Enter year of birth: ");
-                //to calculate the age of the person using this year minus the birth year entered
-                Age = DateTime.Now.Year - Convert.ToInt32(Console.ReadLine());
+                //calculates the age of the person using this year minus the birth year entered
+                //Age = DateTime.Now.Year - Convert.ToInt32(Console.ReadLine());
                 //sets the SetYearofBirth to the Age that was calcualted above
-                one.SetYearofBirth(Age);
+                one.YearofBirth = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("");
                 //Displayed on console
-                Console.WriteLine($"Person: {one.GetFullName()} is {one.GetYearofBirth()} years old.");
+                Console.WriteLine($"Person: {one.GetFullName()} is {one.GetAge()} years old.");
 
                 //User can choose if they want to enter another person
                 Console.WriteLine("Do you want to enter another person? (y/n)");
@@ -55,8 +54,8 @@ namespace Question_4
             } while (addPerson);
             //Exits the program
             Console.WriteLine("Press any key to exit program");
-            Console.ReadLine();
-            Console.Clear();
+            
+            
         }
     }
 }

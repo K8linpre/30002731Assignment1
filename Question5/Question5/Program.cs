@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using Question5;
 
 namespace Question5
-{
+{   //main program
     class Program
     {
         static void Main(string[] args)
         {
             Student stud1 = new Student();
-
+            //displays on console and allows user to input data
             Console.WriteLine("Enter the name of the new student below");
             Console.WriteLine("Enter first name: ");
             stud1.FirstName = (Console.ReadLine());
