@@ -48,6 +48,7 @@ namespace Question5
     public class Student : Person
     {   
         public string campus;
+        public int StudentID;
         //get and set methods for Campus
         public string Campus
         {
@@ -60,13 +61,15 @@ namespace Question5
                 campus = value;
             }
         }
-        public int StudentID(int min, int max)
-        {    
-            Random rnd = new Random();           
-            lock (rnd) // synchronize
-            {
-                return rnd.Next(min, max);
-            }
+        //method to calculate the four digit, random Student ID
+        public int EnrollStudent(int min, int max)
+        {
+            //https://stackoverflow.com/questions/767999/random-number-generator-only-generating-one-random-number/768001
+            //Creates a random number using a set minumum and maximum from program.cs and returns that random number as the StudentID.
+            Random rnd = new Random();
+            StudentID = rnd.Next(min, max);
+            return StudentID;
+            
         }          
     }
 }
